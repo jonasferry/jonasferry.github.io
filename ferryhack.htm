@@ -158,7 +158,7 @@ Armor does not take up slots when worn, only when carried. Some monsters wear ar
 
 Armor      AC  Mv(sq) Slots Cost(gp)
 Cloth       1    0      1      1
-Shield      1   -1      2      5
+Shield      1   -1      1      5
 Leather     2    0      2     15
 Leather     3    0      4     20
 (studded)
@@ -496,11 +496,12 @@ Protects from damage from the spells Fire (ELD) and Frost (FROST), as well as no
 Darkness (MÖRKER), range 80 squares, duration 1 dungeon turn
 Makes part of an object (approximately 4x4x4 cm) consume all light in 2 squares in each direction. Each extra SL either adds 2 extra squares in each direction or increases duration by 1 dungeon turn. To overcome the spell Light (LJUS) an equal SL or more of Darkness (MÖRKER) is needed.
 
-Stone Wall (STENVÄGG): ...
+Stone Wall (STENVÄGG), range 8 squares, duration 1 dungeon turn
+Pulls up a wall from the dirt or a stone floor that is 1 square thick, 3 squares wide, and 3 squares high. Each extra SL adds the length of a square in one direction.
 
 Level 2
 Anti Magic (ANTIMAGI), range 80 squares, duration 1 dungeon turn
-Placed on a creature or item and protects a volume of 3x3x3 squares. Gives +1 save vs magic per SL. If cast in conjuction with Armor (SKYDD), the chance of success for Anti Magic (ANTIMAGI) is decreased by 1 per SL Armor (SKYDD).
+Placed on a creature or item and protects a volume of 3x3x3 squares. Gives +1 save vs magic per SL. A spell that is successfully saved is returned at the spellcaster. If cast in conjuction with Armor (SKYDD), the chance of success for Anti Magic (ANTIMAGI) is decreased by 1 per SL Armor (SKYDD).
 
 Lightning (BLIXT), range 40 squares, duration instant, quick
 Shoots a lightning bolt from the spellcaster to the closest target in front of the spellcaster. If two targets are equal, it's drawn to the target with most metal. Target gets save vs magic for half damage. This spell is quick, which means it takes effect the same combat round as it is prepared, not the next round.
@@ -514,17 +515,23 @@ Gives a weapon -1 AV and damage per SL. Each extra SL gives an extra -1, which m
 Enchant Weapon (FÖRTROLLA VAPEN), range 80 squares, duration 1 dungeon turn
 Gives a weapon +1 AV and damage per SL. Each extra SL gives an extra +1, which may be divided between multiple weapons. Enchanted weapons damage monsters that only take damage from magic weapons.
 
-Lift (LYFT): ...
+Lift (LYFT), range 80 squares, duration 2 dungeon turns
+Lifts one human-sized object per SL, and can fly it through the air at a speed of 8 squares per movement action. Can be divided between multiple objects to make them all lighter or break a fall. When breaking a fall, each SL missing from lifting the full objects gives 1d6 damage.
+
 Decrease (MINSKA), range touch, duration 1 dungeon turn
 Decrease the target's STR, DEX, or CON by 1 per SL. Attributes cannot be decreased below 1.
 
-Dispel (SKINGRA): ... Quick
+Dispel (SKINGRA), range touch, duration instant, quick
+Destroys another spell, or banishes an elemental, of equal or lower SL. Dispel (SKINGRA) must target a specific spell, but the spellcaster only needs an approximate idea of what the spell is. If the target is protected by Anti Magic (ANTIMAGI) it gets to save vs magic to avoid destruction. Items get 10+1 per SL Anti Magic (ANTIMAGI). A spell that is being prepared can be dispelled, if the SL is equal or higher than the spell to destroy.
 
-Armor (SKYDD): ... If cast in conjuction with Anti Magic (ANTIMAGI), the chance of success for Armor (SKYDD) is decreased by 1 per SL Anti Magic (ANTIMAGI).
+Armor (SKYDD), range 80 squares, duration 1 dungeon turn
+Adds +1 AC per SL. If cast in conjuction with Anti Magic (ANTIMAGI), the chance of success for Armor (SKYDD) is decreased by 1 per SL Anti Magic (ANTIMAGI).
 
-Telepathy (TANKEÖVERFÖRING): ...
+Telepathy (TANKEÖVERFÖRING), range 80 squares, duration 10 combat rounds
+Makes it possible to communicate without sounds with one target creature per SL. The target can be intelligent or not. Only surface thoughts and feelings can be communicated.
 
-Direction (VARSEBLIVNING): ...
+Direction (VARSEBLIVNING), range 40 squares, duration 1 combat round
+The spellcaster describes what they look for (e.g. a hidden door, gold, another mind), and the spell points in the direction of the closest thing of that kind. Each extra SL gives the direction to the closest thing of another kind.
 
 Increase (ÖKA), range touch, duration 1 dungeon turn
 Increase the target's STR, DEX, or CON by 1 per SL.
@@ -533,24 +540,38 @@ Open (ÖPPNA), range touch, duration instant
 Opens locked doors and chests, and makes swords fall out of their scabbards. To overcome the spell Seal (FÖRSEGLA) an equal SL or more of Open (ÖPPNA) is needed.
 
 Level 3
-Protector (BESKYDDARE): ...
+Protector (BESKYDDARE), range touch, duration permanent
+Nine stones are placed on the ground to protect a volume of 2x2x2 squares. Each extra SL adds the length of 2 squares in one direction. The spell works as a combination of Anti Magic (ANTIMAGI) SL 1 and Energy Beam (ENERGISTRÅLE) SL 1. Any spell saved by Anti Magic (ANTIMAGI) triggers an Energy Beam (ENERGISTRÅLE) that targets the spellcaster.
 
-Summon/Banish Elemental Air   (FRAMMANA/SKICKA BORT ELEMENTAR LUFT-SYLF): ...
+Summon/Banish Elemental (FRAMMANA/SKICKA BORT ELEMENTAR), ...
 
-Summon/Banish Elemental Fire  (FRAMMANA/SKICKA BORT ELEMENTAR ELD-SALAMANDER): ...
 
-Summon/Banish Elemental Earth (FRAMMANA/SKICKA BORT ELEMENTAR JORD-GNOM): ...
+S/B Elemental Air (F/SB ELEMENTAR LUFT-SYLF)
+...
 
-Summon/Banish Elemental Water (FRAMMANA/SKICKA BORT ELEMENTAR VATTEN-UNDIN): ...
+S/B Elemental Fire (F/SB ELEMENTAR ELD-SALAMANDER)
+...
 
-Invisibility (OSYNLIGHET): ...
+S/B Elemental Earth (F/SB ELEMENTAR JORD-GNOM)
+...
 
-Sight (SYN): ...
+S/B Elemental Water (F/SB ELEMENTAR VATTEN-UNDIN)
+...
+
+Invisibility (OSYNLIGHET), range touch, duration 2 dungeon turns
+Turns one human-sized target invisible. An invisible person can only walk (i.e. use one normal or two careful movement actions) and talk and remain invisible. If they fight, run, use magic, or gets hurt, the spell is broken.
+
+Sight (SYN), range 80 squares, duration 10 combat turns
+The spellcaster can see and hear what happens in an area they are familiar with and is within the full range. If the spellcaster is not familiar with the area, the range is limited to 20 squares. Each extra SL allows the spellcaster to observe 24 hours back in time. If the spellcaster touches an item they get a vision of a previous owner or one use of the item. Each SL gives a 10% chance of finding the activation phrase of a magic item. The spellcaster can only try this once per item, until the spellcaster increase their level.
 
 Level 4
 Transform (FÖRÄNDRA): ...
-Heal (HELA): ...
+
+Heal (HELA), range touch, duration instant
+Heals 1d6 HP per SL of damage from cuts, bruises, fire, cold, Energy Beam (ENERGISTRÅLE), Lightning (BLIXT), or acid. It does not heal damage from poison or disease.
+
 Control Person (KONTROLLERA PERSON): ...
+
 Teleportation (TELEPORTERA): ...
 
 The following spells from Drakar och Demoner Expert (1985) are used when creating magic items. They are not available to PCs.
