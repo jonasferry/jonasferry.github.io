@@ -15,7 +15,7 @@ $ ls
 ferryhack.htm  passwords.txt  README
 
 $ date -r ferryhack.htm +%F
-2016-04-25
+2016-04-27
 
 $ cat ferryhack.htm
 OVERVIEW
@@ -543,20 +543,59 @@ Level 3
 Protector (BESKYDDARE), range touch, duration permanent
 Nine stones are placed on the ground to protect a volume of 2x2x2 squares. Each extra SL adds the length of 2 squares in one direction. The spell works as a combination of Anti Magic (ANTIMAGI) SL 1 and Energy Beam (ENERGISTRÅLE) SL 1. Any spell saved by Anti Magic (ANTIMAGI) triggers an Energy Beam (ENERGISTRÅLE) that targets the spellcaster.
 
-Summon/Banish Elemental (FRAMMANA/SKICKA BORT ELEMENTAR), ...
+Summon/Banish Elemental (FRAMMANA/SKICKA BORT ELEMENTAR), range 8 squares, duration 10 combat rounds
+Summons a human-sized air, fire, earth, or water elemental of 1 HD per SL from an existing instance of that element within range. When summoned in combat, the elemental gets the same intiative as the spellcaster. The spellcaster concentrates to move the elemental, otherwise the elemental stands still.
 
+To banish an elemental, the spellcaster casts an equal or higher SL as the elemental's HD. The elemental rolls save vs magic with 10+HD. Each extra SL of Banish Elemental (SKICKA BORT ELEMENTAR) above HD gives -1 to the save.
 
-S/B Elemental Air (F/SB ELEMENTAR LUFT-SYLF)
-...
+Elementals are affected by magic and their attacks count as magic attacks. Elementals are allowed one free attack per combat round.
 
-S/B Elemental Fire (F/SB ELEMENTAR ELD-SALAMANDER)
-...
+The four elementals are different spells and must be learned separately.
 
-S/B Elemental Earth (F/SB ELEMENTAR JORD-GNOM)
-...
+S/B Elemental Air-Sylph (F/SB ELEMENTAR LUFT-SYLF)
+The air sylph is a vaguely human-looking entity made of whirling wind.
 
-S/B Elemental Water (F/SB ELEMENTAR VATTEN-UNDIN)
-...
+It can:
+1. Move 12 squares per action unecumbered, 8 squares carrying a note on paper, and 1 square carrying items up to 20 slots.
+2. Blow someone to the ground, same as Trick (Push).
+3. Steer an arrow or thrown weapon for +1 AV and damage per HD.
+4. Not be harmed by physical weapons.
+5. Destroy a fire salamander if the air sylph has an equal or higher HD. The fire salamander gets a save at 10+HD to survive.
+
+S/B Elemental Fire-Salamander (F/SB ELEMENTAR ELD-SALAMANDER)
+The fire salamander is a lizard made of fire.
+
+It can:
+1. Move 4 squares per action.
+2. Attack a target with fire making 1d6 damage per HD. See entry on FIRE.
+3. Ignite flammable objects.
+4. Illuminate 1 square per HD in each direction.
+5. Be harmed by physical weapons.
+6. Heal itself from a fire. Make an attack roll and heal as many HP.
+7. Destroy an air sylph if the fire salamander has an equal or higher SL. The air sylph gets a save at 10+HD to survive.
+8. Heat a metal weapon to increase damage by 1d6 for a number of combat turns equal to the fire salamander's HD. After the fight, roll save or weapon breaks.
+
+S/B Elemental Earth-Gnome (F/SB ELEMENTAR JORD-GNOM)
+The earth gnome is a humanoid entity made of clay.
+
+It can:
+1. Move 4 squares per action.
+2. Attack with AV 10+HD and damage 1d6 per HD.
+3. Be harmed by physical weapons, but attacker must roll save or weapon breaks.
+4. Give the direction to closet deposit of a type of metal specified by the spellcaster.
+5. Destroy an water undine if the earth gnome has an equal or higher SL. The water undine gets a save at 10+HD to survive.
+6. Destroy a fire elemental by lowering both elementals' HP until one is destroyed.
+
+S/B Elemental Water-Undine (F/SB ELEMENTAR VATTEN-UNDIN)
+The water undine is either a pillar of water or a female entity.
+
+It can:
+1. Move 1 square per action on land and 6 in water, and can carry 20 slots per SL in water.
+2. Drown a target for 1d6 damage per combat round.
+3. Take half damage rounded up from physical weapons.
+4. Destroy an earth gnome if the water undine has an equal or higher SL. The earth gnome gets a save at 10+HD to survive.
+5. Destroy a fire elemental by lowering both elementals' HP until one is destroyed.
+6. Make weapons work under water as if on land.
 
 Invisibility (OSYNLIGHET), range touch, duration 2 dungeon turns
 Turns one human-sized target invisible. An invisible person can only walk (i.e. use one normal or two careful movement actions) and talk and remain invisible. If they fight, run, use magic, or gets hurt, the spell is broken.
@@ -565,14 +604,17 @@ Sight (SYN), range 80 squares, duration 10 combat turns
 The spellcaster can see and hear what happens in an area they are familiar with and is within the full range. If the spellcaster is not familiar with the area, the range is limited to 20 squares. Each extra SL allows the spellcaster to observe 24 hours back in time. If the spellcaster touches an item they get a vision of a previous owner or one use of the item. Each SL gives a 10% chance of finding the activation phrase of a magic item. The spellcaster can only try this once per item, until the spellcaster increase their level.
 
 Level 4
-Transform (FÖRÄNDRA): ...
+Transform (FÖRÄNDRA), range 20 squares, duration 2 dungeon turns
+Transforms one human-sized item or creature into another of the same type (i.e. animal, plant, or mineral). Attributes remain the same, as does size, and the spell does not give access to any supernatural abilities of the new form. Unwilling targets get to save vs magic. Each extra SL can transform a single larger target or multiple regular-sized targets.
 
 Heal (HELA), range touch, duration instant
 Heals 1d6 HP per SL of damage from cuts, bruises, fire, cold, Energy Beam (ENERGISTRÅLE), Lightning (BLIXT), or acid. It does not heal damage from poison or disease.
 
-Control Person (KONTROLLERA PERSON): ...
+Control Person (KONTROLLERA PERSON), range 80 squares, duration 10 combat rounds
+Controls one intelligent creature (i.e. not animals) per SL. The target gets to save vs magic. If the first save is successful, target avoids the full effect, otherwise the target gets to save each combat turn to act independantly that turn. The spellcaster must concentrate on the targets, otherwise they fall down. Targets cannot not perform independant actions and cannot be made to commit suicide. If the spellcaster's concentration is broken, current targets fall into a deep sleep. Sleeping targets gets to CON save each combat round to wake up. 
 
-Teleportation (TELEPORTERA): ...
+Teleportation (TELEPORTERA), range touch, duration instant
+Teleports a human-sized item or creature to a place the spellcaster knows well at most 100 m away. Each extra SL adds another 100 m. Unwilling targets gets to save vs magic.
 
 The following spells from Drakar och Demoner Expert (1985) are used when creating magic items. They are not available to PCs.
 
