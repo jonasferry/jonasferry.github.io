@@ -48,9 +48,6 @@ PUBLIC "-//W3C//DTD HTML 4.01//EN"
       font-size: 14px;
       margin: 0;
     }
-    .obsolete {
-      color: grey;
-    }
   </style>
 </head>
 <body>
@@ -149,7 +146,6 @@ IN THE JAWS OF THE DRAGON (I drakens käftar, 1991)
 <a href="#COMBATROUND">COMBAT ROUND</a>
 <a href="#DUNGEONTURN">DUNGEON TURN</a>
 <a href="#DUNGEONTURN">HIT POINT</a>
-<a href="#SQUARE">SQUARE</a>
 <a href="#XP">XP</a>
 </pre>
 
@@ -343,43 +339,22 @@ A critical hit in a fight is when the roll including modifiers equal AV. Damage 
 A critical wound is when a PC is brought to 0 HP. The PC's condition is stable for the PC's current level number of turns, but after that must roll save vs death each round. To stop this process a successful first aid roll must be performed. When stabilized, the PC is knocked out until they reach positive HP.
 </pre>
 
-<h2 class="obsolete">DEFENSIVE MOVEMENT (grid: obsolete)</h2>
-<pre class="obsolete">
-By default when a PC or monster is attacked, the defender moves defensively to a square backwards or diagonally backwards. It is considered a part of the defense and does not provoke free attacks from other opponents. By default, the attacker moves to the square that the defender occupied.
+<h2>DEFENSIVE MOVEMENT</h2>
+<pre>
+By default when a PC or monster is attacked, the defender moves defensively backwards or diagonally backwards. It is considered a part of the defense and does not provoke free attacks from other opponents. By default, the attacker moves to the spot that the defender occupied.
 
-The defender can choose to stand their ground, which gives the attacker combat advantage. If a square is occupied by a wall, item, or another character, the defender must move to a free square. If all squares are occupied, the defender may move to a square with an ally if the ally makes a defensive movement of their own. If all squares are occupied with non-allies, the defender must stand their ground and give the attacker combat advantage.
+The defender can choose to stand their ground, which gives the attacker combat advantage. The defender may move to a spot with an ally if the ally makes a defensive movement of their own. If the defender cannot move due to a wall, an object, or non-allies, the defender must stand their ground and give the attacker combat advantage.
 
-Combat advantage from standing ground is added to combat advantage from flanking. The squares are the same as for FLANK.
+Combat advantage from standing ground is included when determining combat advantage.
 
-The attacker can choose to not follow the defender by using the special combat option Fight Defensively from Whitehack. This makes it possible to disengage and use the second movement action for full movement.
+The attacker can choose to not follow the defender by using the special combat option Fight Defensively from Whitehack. This makes it possible to disengage and use the second movement action for full movement unless the defender stand their ground.
 
 The special combat option Trick (Push) and the Strong melee option 2 (Push) take effect after the defender's movement and the attacker's follow-up move.
-
-The diagrams show an attacker (a) that attacks a defender (d), and the squares that the defender can move to (x).
- ___ ___ ___
-|   | x | x |
-|___|___|___|
-|   | d | x |
-|___|___|___|
-| a |   |   |
-|___|___|___|
- ___ ___ ___
-|   |   | x |
-|___|___|___|
-| a | d | x |
-|___|___|___|
-|   |   | x |
-|___|___|___|
 </pre>
 
 <h2 id="DISENGAGE">DISENGAGE</h2>
 <pre>
 To disengage from melee range, the main action action is used to defend and one action is used to move carefully away from the opponent to near range. Disengaging does not provoke a free attack.
-</pre>
-
-<h2 class="obsolete">DISENGAGE (grid: obsolete)</h2>
-<pre class="obsolete">
-To disengage from combat, one action is used to defend and one action is used to move carefully away from the opponent. An unecumbered human moves 3 squares when disengaging. Disengaging does not provoke a free attack.
 </pre>
 
 <h2 id="DUNGEONTURN">DUNGEON TURN</h2>
@@ -441,48 +416,9 @@ When performing first aid, roll trained WIS. When using a first aid kit, roll st
 When one side in melee outnumbers the other they are often considered flanking. This is included as part of combat advantage assignment.
 </pre>
 
-<h2 class="obsolete">FLANK (grid: obsolete)</h2>
-<pre class="obsolete">
-The attacker gets combat advantage if an ally is placed behind or diagonally behind the defender. 
-
-Combat advantage from flanking is added to combat advantage from standing ground. The squares are the same as for DEFENSIVE MOVEMENT.
-
-The diagrams show an attacker (a) that attacks a defender (d), and the squares where an ally must stand to give the attacker combat advantage.
- ___ ___ ___
-|   | x | x |
-|___|___|___|
-|   | d | x |
-|___|___|___|
-| a |   |   |
-|___|___|___|
- ___ ___ ___
-|   |   | x |
-|___|___|___|
-| a | d | x |
-|___|___|___|
-|   |   | x |
-|___|___|___|
-</pre>
-
 <h2 id="FREEATTACK">FREE ATTACK</h2>
 <pre>
 If a combatant flees from melee without using a disengage action, all combatants on the other side get a free attack.
-</pre>
-
-<h2 class="obsolete">FREE ATTACK (grid:obsolete)</h2>
-<pre class="obsolete">
-PCs and monsters guard their surrounding eight squares. If an opponent leaves a guarded square, the guard gets a free attack. Characters with more than one free attack (e.g. Strong) may attack once for each guarded square that is left, a number of times equal to the character's level.
-
-The only thing that provokes a free attack is to move away from a guarded square. Readying a potion, quaffing a potion, or preparing a spell does not provoke a free attack.
-
-The diagram shows a guard (g) and the eight guarded squares (x).
- ___ ___ ___
-| x | x | x |
-|___|___|___|
-| x | g | x |
-|___|___|___|
-| x | x | x |
-|___|___|___|
 </pre>
 
 <h2 id="GAMESTATSAREOPENINFORMATION">GAME STATS ARE OPEN INFORMATION</h2>
@@ -591,19 +527,6 @@ Medium
 Long
 
 To move one range increment costs a move action. To move a second range increment in the same combat round, roll CON with AC based on encumbrance. An unencumbered character has AC 0. Moving from melee range to near range requires a disengage action. Critical failure means that the character cannot perform any actions next round.
-</pre>
-
-<h2 id="" class="obsolete">MOVEMENT (grid: obsolete)</h2>
-<pre class="obsolete">
-Each PC and monster can use one or two actions for movement each combat round. Moving carefully (e.g. disengage from combat or sneak) means movement per action is halved. Walking or running doesn't affect the movement per action, it all depends on if the character use one or two actions for movement. Wearing full plate armor means that the second movement action (after modification) is halved.
-<b>
-Species  Move(sq)</b>
-Giant       8
-Human       6
-Elf         6
-Dwarf       4
-Halfling    4
-Goblin      4
 </pre>
 
 <h2 id="PICKLOCK">PICK LOCK</h2>
@@ -944,11 +867,6 @@ The following spells from Drakar och Demoner Expert (1985) are used when creatin
 <h3>Nexus (NEXUS): ...</h3>
 <pre></pre>
 
-<h2 class="obsolete">SQUARE (grid: obsolete)</h2>
-<pre class="obsolete">
-1.5 x 1.5 meter squares are used in dungeon maps. Movement and ranges are described in squares.
-</pre>
-
 <h2 id="SURPRISE">SURPRISE</h2>
 <pre>
 When surprised in the first round of combat, roll 1d6: 1=one round of no action, 2=two rounds. Surpise is included in assigning combat advantage.
@@ -1052,21 +970,7 @@ LVL  SESSIONS</b>
 </pre>
 </h2>
 
-<h2 id="" class="obsolete">XP (grid: obsolete)</h2>
-<pre class="obsolete">
-XP for treasure is collected when treasure is spent. Treasure is divided between the PCs by the players. If an NPC helps the PCs find the treasure, the referee negotiates for their share of treasure. Only valuables (e.g. coins, jewels) and art objects (e.g. jewelry, paintings) are treasure. Utility articles (e.g. weapons, tools) are not treasure and do not give XP.
-
-- Treasure spent to acquire equipment gives XP to current PC.
-- Treasure donated (e.g. by partying, giving to the poor, offering to religion) gives XP to current and next PC.
-- Treasure in the form of magic items donated to NPCs give XP to next PC as 1/10 of their resale value.
-
-1 silver piece = 1 XP.
-
-XP for defeated monsters (not necessarily killed) is divided between the PCs by the players. If an NPC helps the PCs in the fight, the referee negotiates for their share of XP.
-
-XP for written adventures are handed out when the PCs have explored a specificed part of the adventure. The referee decided on how many XP the complete adventure is worth based on length and difficulty, and divides them between different parts of the adventure. In a five level dungeon, the PCs may get 500 XP after each level explored. In a five checkpoint linear adventure, the PCs may get 500 XP at each checkpoint. Adventure XP is individual, and is not divided between multiple characters. The player must be present for their PC to get adventure XP.
-</pre>
-
 <pre>
-$ _
-</pre></body></html>
+<a href="http://jonasferry.com">JONASFERRY.COM</a>
+</pre>
+</body></html>
