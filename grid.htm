@@ -1,0 +1,553 @@
+<!DOCTYPE html 
+PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+	<title>Ferryhack</title>
+  <style>
+    body {
+      background-color: white; 
+      color: black;
+      font-family: monospace;
+      font-size: 14px;
+      width: 80ch;
+      margin:0 auto;
+    }
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    pre {
+      margin-top: 0;
+      white-space: pre-wrap;       /* css-3 */
+      white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+      white-space: -pre-wrap;      /* Opera 4-6 */
+      white-space: -o-pre-wrap;    /* Opera 7 */
+      word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    }
+    h1 {
+      font-family: monospace;
+      font-size: 17px;
+      margin: 0;
+    }
+    h2 {
+      font-family: monospace;
+      font-size: 15px;
+      margin: 0;
+    }
+    h3 {
+      font-family: monospace;
+      font-size: 14px;
+      margin: 0;
+    }
+    .obsolete {
+      color: grey;
+    }
+  </style>
+</head>
+<body>
+<pre>
+<a href="http://jonasferry.com">JONASFERRY.COM</a>
+2016-11-15
+</pre>
+
+<h1>OVERVIEW</h1>
+<pre>
+Ferryhack started in October 2013 as a combination of rules from <a href="https://whitehackrpg.wordpress.com/">WHITEHACK</a> and written adventures from <a href="https://en.wikipedia.org/wiki/Drakar_och_Demoner">DRAKAR OCH DEMONER</a>. The first adventure saw two players crawl through The Pyramid of the Spider King (Spindelkonungens pyramid), and has been followed by many old-school Drakar adventures in a bi-weekly campaign. The name Ferryhack is used by the players to refer to my (Jonas Ferry) propensity to add, modify, and remove rules from Whitehack. We started with Whitehack 1, but have moved on to a house-ruled version of Whitehack 2.
+
+In addition to rules from Whitehack 2 (2015) and Drakar och Demoner 2.1 (1985), the main inspiration is Moldvay's <a href="https://en.wikipedia.org/wiki/Dungeons_%26_Dragons_Basic_Set#1981_revision">BASIC DUNGEONS AND DRAGONS</a> (1981).
+
+This text describes the grid rules used mainly during the adventures DEAD FOREST (Döda skogen, 1985), GATES OF POWER (Maktens portar, 1985), and HEART OF DARKNESS (Mörkrets hjärta, 1986). At the start of VOICE FROM THE PAST (Rösten från forntiden, 1986), the group returned to the theater of mind, described in <a href="http://jonasferry.com/ferryhack.htm">FERRYHACK</a>.
+</pre>
+
+<h1>TABLE OF CONTENTS</h1>
+
+<h2>GRID</h2>
+<pre>
+<a href="#ABBREVIATIONS">ABBREVIATIONS</a>
+<a href="#ARMOR">ARMOR</a>
+<a href="#DEFENSIVEMOVEMENT">DEFENSIVE MOVEMENT</a>
+<a href="#DISENGAGE">DISENGAGE</a>
+<a href="#ENCUMBRANCE">ENCUMBRANCE</a>
+<a href="#FLANK">FLANK</a>
+<a href="#FREEATTACK">FREE ATTACK</a>
+<a href="#HORSE">HORSE</a>
+<a href="#MOVEMENT">MOVEMENT</a>
+<a href="#SPELLS">SPELLS</a>
+<a href="#SQUARE">SQUARE</a>
+<a href="#XP">XP</a>
+</pre>
+  
+<h1>HOUSE RULES</h1>
+
+<h2 id="ABBREVIATIONS">ABBREVIATIONS</h2>
+<pre>
+AC  Armor Class or Action Complexity
+AV  Attack Value or Attribute Value
+BEP Base Encumbrance Point
+CHA Charisma attribute
+CON Constitution attribute
+CP  Copper Piece
+DEX Dexterity attribute
+GP  Gold Piece
+HD  Hit Dice
+HP  Hit Points
+INT Intelligence attribute
+MP  Magic Points
+NPC Non-Player Character
+PC  Player Character
+SL  Spell Level
+SP  Silver Piece
+ST  Saving Throw
+STR Strength attribute
+XP  Experience Points
+WIS Wisdom attribute
+</pre>
+
+<h2 id="ARMOR">ARMOR</a>
+<pre>
+Armor does not take up slots when worn, only when carried. Some monsters wear armor (e.g. orcs wear studded leather or leather and shield), some monsters wear armor in addition to natural armor (e.g. one type of ogre may have natural armor 0 and chainmail while another have natural armor 2 and leather), and some monster only have natural armor (e.g. wolves). The sum of natural armor and worn armor is found in Whitehack's monster table.
+
+Armor      AC  Mv(sq) Slots Cost(gp)
+Cloth       1    0      1      1
+Shield      1   -1      1      5
+Leather     2    0      2     15
+Leather     3    0      4     20
+(studded)
+Chainmail   4   -1      6     30
+Splint Mail 5   -1      8     40
+Full Plate  6   -1*    10     50
+
+* To run in full plate, roll STR. Success means second move action is used, failure means PC cannot move at all next round.
+</pre>
+
+<h2 id="DEFENSIVE MOVEMENT">DEFENSIVE MOVEMENT</h2>
+<pre>
+By default when a PC or monster is attacked, the defender moves defensively to a square backwards or diagonally backwards. It is considered a part of the defense and does not provoke free attacks from other opponents. By default, the attacker moves to the square that the defender occupied.
+
+The defender can choose to stand their ground, which gives the attacker combat advantage. If a square is occupied by a wall, item, or another character, the defender must move to a free square. If all squares are occupied, the defender may move to a square with an ally if the ally makes a defensive movement of their own. If all squares are occupied with non-allies, the defender must stand their ground and give the attacker combat advantage.
+
+Combat advantage from standing ground is added to combat advantage from flanking. The squares are the same as for FLANK.
+
+The attacker can choose to not follow the defender by using the special combat option Fight Defensively from Whitehack. This makes it possible to disengage and use the second movement action for full movement.
+
+The special combat option Trick (Push) and the Strong melee option 2 (Push) take effect after the defender's movement and the attacker's follow-up move.
+
+The diagrams show an attacker (a) that attacks a defender (d), and the squares that the defender can move to (x).
+ ___ ___ ___
+|   | x | x |
+|___|___|___|
+|   | d | x |
+|___|___|___|
+| a |   |   |
+|___|___|___|
+ ___ ___ ___
+|   |   | x |
+|___|___|___|
+| a | d | x |
+|___|___|___|
+|   |   | x |
+|___|___|___|
+</pre>
+
+<h2 id="DISENGAGE">DISENGAGE</h2>
+<pre>
+To disengage from combat, one action is used to defend and one action is used to move carefully away from the opponent. An unecumbered human moves 3 squares when disengaging. Disengaging does not provoke a free attack.
+</pre>
+
+<h2 id="ENCUMBRANCE">ENCUMBRANCE</h2>
+<pre>
+Equipment is carried in slots divided between body, backpack, and sack. One slot is equal to 1 BEP or 2-3 kg. 200 small items (e.g. coins, rings, jewels) use one slot. Normal sized items (e.g. swords, shields) use one slot. A quiver with 20 items of ammunition (e.g. quiver with arrows, bolts, sling stones) use one slot. Large items (e.g. two-handed swords, halberds) use two slots.
+
+The body carries 5 slots. A one-handed weapon use 1 slot, a shield 1 slot, and a two-handed weapon 2 slots. Worn armor does not use any slots. Used body slots do not affect movement.
+
+A small backpack carries 5 slots while a large backpack carries 10 slots. Any slots used in a small backpack reduce movement by 1 square. Any slots used in a large backpack reduce movement by 2 squares.
+
+A sack carries 5 slots. Any slots used in a sack reduce movement by 1 square.
+
+STR 13+ gives an extra slot of each type and STR 16+ gives two extra slots.
+<b>
+TYPE     SLOTS    SLOTS    SLOTS      ENC
+         STR 12-  STR 13+  STR 16+</b>
+Body        5        6        7        0
+Backpack    5        6        7        2
+  small
+Backpack   10       12       14        4
+  large
+Sack        5        6        7        2
+<b>
+GEAR       SLOTS  COST(sp)</b>
+200 sp       1      200
+Ration      1/2       1
+Ration      1/4       3
+(trail)
+Bandages    1/2       2
+Torch       1/2     1/6
+Lantern      2       10
+Lamp oil    1/4       2
+Quiver       1        5
+Saddle       5       25
+Saddle bags  -       10
+Tent         5       15
+(1 person)
+</pre>
+
+<h2 id="FLANK">FLANK</h2>
+<pre>
+The attacker gets combat advantage if an ally is placed behind or diagonally behind the defender. 
+
+Combat advantage from flanking is added to combat advantage from standing ground. The squares are the same as for DEFENSIVE MOVEMENT.
+
+The diagrams show an attacker (a) that attacks a defender (d), and the squares where an ally must stand to give the attacker combat advantage.
+ ___ ___ ___
+|   | x | x |
+|___|___|___|
+|   | d | x |
+|___|___|___|
+| a |   |   |
+|___|___|___|
+ ___ ___ ___
+|   |   | x |
+|___|___|___|
+| a | d | x |
+|___|___|___|
+|   |   | x |
+|___|___|___|
+</pre>
+
+<h2 id="FREE ATTACK">FREE ATTACK</h2>
+<pre>
+PCs and monsters guard their surrounding eight squares. If an opponent leaves a guarded square, the guard gets a free attack. Characters with more than one free attack (e.g. Strong) may attack once for each guarded square that is left, a number of times equal to the character's level.
+
+The only thing that provokes a free attack is to move away from a guarded square. Readying a potion, quaffing a potion, or preparing a spell does not provoke a free attack.
+
+The diagram shows a guard (g) and the eight guarded squares (x).
+ ___ ___ ___
+| x | x | x |
+|___|___|___|
+| x | g | x |
+|___|___|___|
+| x | x | x |
+|___|___|___|
+</pre>
+
+<h2 id="HORSE">HORSE</h2>
+<pre>
+Pack animals have three encumbrance levels, with a number of slots according to class, e.g. mule=20. Master bred animals (cost x 20) get death saves at 5+HD. A normal human take up 40 slots. 1 slot = 1 BEP = 2-3 kg.
+<b>
+Encumbrance  Move(sq)</b>
+First level   Full			
+Second level   -2
+Third level    -3
+<b>
+Class      HD  Move(sq) Slots  Cost(sp)</b>
+Donkey      1    6       15      15
+Mule        1    8       20      20
+Small horse 1    8       20      30
+Horse       2   10       25      60
+Work horse  3    8       50      90
+War horse   3    8       50     120
+</pre>
+
+<h2 id="MOVEMENT">MOVEMENT</h2>
+<pre>
+Each PC and monster can use one or two actions for movement each combat round. Moving carefully (e.g. disengage from combat or sneak) means movement per action is halved. Walking or running doesn't affect the movement per action, it all depends on if the character use one or two actions for movement. Wearing full plate armor means that the second movement action (after modification) is halved.
+<b>
+Species  Move(sq)</b>
+Giant       8
+Human       6
+Elf         6
+Dwarf       4
+Halfling    4
+Goblin      4
+</pre>
+
+<h2 id="SPELLS">SPELLS</h2>
+<pre>
+Spellcasters learn spells by assigning them to active or inactive slots. It takes 12 hours to switch an inactive spell into an active slot. Spellcasting monsters have HD number of active spells and an equal number of inactive.
+
+Spells have a minimum level for PCs or a minimum HD for monsters to learn the spell. A spellcaster can cast spells of a spell level equal to or lower than their level.  
+
+Spells take a full round of concentration to prepare where the spellcaster cannot do anything else. When the spell is prepared, the spell and spell level (SL) must be stated, but the target is decided when the spell takes effect. The spell takes effect immediately before the spellcaster's next round, so they can use the next round to prepare a new spell.
+
+Successful spells and critical failures cost 1 MP per SL. Failed spells cost 1 MP regardless of SL. Aborted spells do not cost any MP.
+
+A PC spellcaster's chance of success is based on their save vs magic, with +2 for all wise characters. WIS 13+ gives +1 and WIS 16+ gives +2.
+
+Caster  WIS  WIS  WIS
+level   12-  13+  16+
+  1      8    9   10
+  2      9   10   11
+  3     10   11   12
+  4     11   12   13
+  5     12   13   14
+  6     13   14   15
+  7     14   15   16
+  8     15   16   17
+  9     16   17   18
+ 10     17   18   19
+
+A monster spellcaster's chance of success is 5+HD and their MP is 10+HD, with +1 chance of success at HD 3 and +2 at HD 6.
+
+As long as a spellcaster concentrates on an active spell they can not do anything else, not even move or speak.
+
+The spells are presented with the Swedish name in parenthesis.
+
+Adding spell descriptions is work in progress.
+</pre>
+
+<h3>Level 1</h3>
+<h3>Mirror Image (AVBILD), range 20 squares, duration 2 dungeon turns</h3>
+<pre>
+Creates one human-sized illusion per SL. Extra SLs create multiple illusions or one larger illusion. The illusion is only visual, and has no sound, taste, or substance. The illusion can be made to move as long as the spellcaster concentrates.
+</pre>
+
+<h3>Fire (ELD), range 80 squares, duration instant</h3>
+<pre>
+Heats a sphere the size of a square and makes 1d6 damage. Extra SL either gives an extra affected square or +1d6 damage in any combination. Stopped by Armor (SKYDD), but not by Anti Magic (ANTIMAGI). See entry on FIRE for damage and save.
+</pre>
+
+<h3>Frost (FROST)</h3>
+<pre>
+See Fire (ELD), but cold. There's no corresponding effect to catching on fire.
+</pre>
+
+<h3>Seal (FÖRSEGLA), range touch, duration 2 dungeon turns</h3>
+<pre>
+Binds together two objects that don't move and fit together, for example a door to the frame or a sword to the scabbard. The objects are impossible to separate for the spell's duration, and any attempts to bash them open (i.e. chests or doors) take an extra dungeon turn. Each extra SL either adds two extra dungeon turns of duration or an extra dungeon turn of durability against bashing.
+</pre>
+
+<h3>Light (LJUS), range 80 squares, duration 1 dungeon turn</h3>
+<pre>
+Makes part of an object (approximately 4x4x4 cm) glow and illuminate 2 squares in each direction. Each extra SL either adds 2 extra squares in each direction or increases duration by 1 dungeon turn. To overcome the spell Darkness (MÖRKER) an equal SL or more of Light (LJUS) is needed.
+</pre>
+
+<h3>Resistance (MOTSTÅNDSKRAFT), range touch, duration 2 dungeon turns</h3>
+<pre>
+Protects from damage from the spells Fire (ELD) and Frost (FROST), as well as normal damage from heat or cold. Decreases 1 HP of damage per SL from those sources. If the user takes damage from multiple sources at the same time, the damage is decreased for each of them.
+</pre>
+
+<h3>Darkness (MÖRKER), range 80 squares, duration 1 dungeon turn</h3>
+<pre>
+Makes part of an object (approximately 4x4x4 cm) consume all light in 2 squares in each direction. Each extra SL either adds 2 extra squares in each direction or increases duration by 1 dungeon turn. To overcome the spell Light (LJUS) an equal SL or more of Darkness (MÖRKER) is needed.
+</pre>
+
+<h3>Stone Wall (STENVÄGG), range 8 squares, duration 1 dungeon turn</h3>
+<pre>
+Pulls up a wall from the dirt or a stone floor that is 1 square thick, 3 squares wide, and 3 squares high. Each extra SL adds the length of a square in one direction.
+</pre>
+
+<h3>Level 2</h3>
+<h3>Anti Magic (ANTIMAGI), range 80 squares, duration 1 dungeon turn</h3>
+<pre>
+Placed on a creature or item and protects a volume of 3x3x3 squares. Gives +1 save vs magic per SL. A spell that is successfully saved is returned at the spellcaster. If cast in conjuction with Armor (SKYDD), the chance of success for Anti Magic (ANTIMAGI) is decreased by 1 per SL Armor (SKYDD).
+</pre>
+
+<h3>Lightning (BLIXT), range 40 squares, duration instant, quick</h3>
+<pre>
+Shoots a lightning bolt from the spellcaster to the closest target in front of the spellcaster. If two targets are equal, it's drawn to the target with most metal. Target gets save vs magic for half damage. This spell is quick, which means it takes effect the same combat round as it is prepared, not the next round.
+</pre>
+
+<h3>Energy Beam (ENERGISTRÅLE), range 80 squares, duration instant</h3>
+<pre>
+A beam of magic energy that does 1d6 damage per SL if it hits the target. Roll to-hit vs target AC, but not save vs magic.
+</pre>
+
+<h3>Curse Weapon (FÖRBANNA VAPEN), range 80 squares, duration 1 dungeon turn</h3>
+<pre>
+Gives a weapon -1 AV and damage per SL. Each extra SL gives an extra -1, which may be divided between multiple weapons.
+</pre>
+
+<h3>Enchant Weapon (FÖRTROLLA VAPEN), range 80 squares, duration 1 dungeon turn</h3>
+<pre>
+Gives a weapon +1 AV and damage per SL. Each extra SL gives an extra +1, which may be divided between multiple weapons. Enchanted weapons damage monsters that only take damage from magic weapons.
+</pre>
+
+<h3>Lift (LYFT), range 80 squares, duration 2 dungeon turns</h3>
+<pre>
+Lifts one human-sized object per SL, and can fly it through the air at a speed of 8 squares per movement action. Can be divided between multiple objects to make them all lighter or break a fall. When breaking a fall, each SL missing from lifting the full objects gives 1d6 damage.
+</pre>
+
+<h3>Decrease (MINSKA), range touch, duration 1 dungeon turn</h3>
+<pre>
+Decrease the target's STR, DEX, or CON by 1 per SL. Attributes cannot be decreased below 1.
+</pre>
+
+<h3>Dispel (SKINGRA), range 80 squares, duration instant, quick</h3>
+<pre>
+Destroys another spell, or banishes an elemental, of equal or lower SL. Dispel (SKINGRA) must target a specific spell, but the spellcaster only needs an approximate idea of what the spell is. If the target is protected by Anti Magic (ANTIMAGI) it gets to save vs magic to avoid destruction. Items get to save with 10+1 per SL Anti Magic (ANTIMAGI). A spell that is being prepared can be dispelled, if the SL is equal or higher than the spell to destroy.
+</pre>
+
+<h3>Armor (SKYDD), range 80 squares, duration 1 dungeon turn</h3>
+<pre>
+Adds +1 AC per SL. If cast in conjuction with Anti Magic (ANTIMAGI), the chance of success for Armor (SKYDD) is decreased by 1 per SL Anti Magic (ANTIMAGI).
+</pre>
+
+<h3>Telepathy (TANKEÖVERFÖRING), range 80 squares, duration 10 combat rounds</h3>
+<pre>
+Makes it possible to communicate without sounds with one target creature per SL. The target can be intelligent or not. Only surface thoughts and feelings can be communicated.
+</pre>
+
+<h3>Direction (VARSEBLIVNING), range 40 squares, duration 1 combat round</h3>
+<pre>
+The spellcaster describes what they look for (e.g. a hidden door, gold, another mind), and the spell points in the direction of the closest thing of that kind. Each extra SL gives the direction to the closest thing of another kind.
+</pre>
+
+<h3>Increase (ÖKA), range touch, duration 1 dungeon turn</h3>
+<pre>
+Increase the target's STR, DEX, or CON by 1 per SL.
+</pre>
+
+<h3>Open (ÖPPNA), range touch, duration instant</h3>
+<pre>
+Opens locked doors and chests, and makes swords fall out of their scabbards. To overcome the spell Seal (FÖRSEGLA) an equal SL or more of Open (ÖPPNA) is needed.
+</pre>
+
+<h3>Level 3<h3>
+<h3>Protector (BESKYDDARE), range touch, duration permanent</h3>
+<pre>
+Nine stones are placed on the ground to protect a volume of 2x2x2 squares. Each extra SL adds the length of 2 squares in one direction. The spell works as a combination of Anti Magic (ANTIMAGI) SL 1 and Energy Beam (ENERGISTRÅLE) SL 1. Any spell saved by Anti Magic (ANTIMAGI) triggers an Energy Beam (ENERGISTRÅLE) that targets the spellcaster.
+</pre>
+
+<h3>Summon/Banish Elemental (FRAMMANA/SKICKA BORT ELEMENTAR), range 8 squares, duration 10 combat rounds</h3>
+<pre>
+Summons a human-sized air, fire, earth, or water elemental of 1 HD per SL from an existing instance of that element within range. When summoned in combat, the elemental gets the same intiative as the spellcaster. The spellcaster concentrates to move the elemental, otherwise the elemental stands still.
+
+To banish an elemental, the spellcaster casts an equal or higher SL as the elemental's HD. The elemental rolls save vs magic with 10+HD. Each extra SL of Banish Elemental (SKICKA BORT ELEMENTAR) above HD gives -1 to the save.
+
+Elementals are affected by magic and their attacks count as magic attacks. Elementals are allowed one free attack per combat round.
+
+The four elementals are different spells and must be learned separately.
+</pre>
+
+<h3>S/B Elemental Air-Sylph (F/SB ELEMENTAR LUFT-SYLF)</h3>
+<pre>
+The air sylph is a vaguely human-looking entity made of whirling wind.
+
+It can:
+1. Move 12 squares per action unecumbered, 8 squares carrying a note on paper, and 1 square carrying items up to 20 slots.
+2. Blow someone to the ground, same as Trick (Push).
+3. Steer an arrow or thrown weapon for +1 AV and damage per HD.
+4. Not be harmed by physical weapons.
+5. Destroy a fire salamander if the air sylph has an equal or higher HD. The fire salamander gets a save at 10+HD to survive.
+</pre>
+
+<h3>S/B Elemental Fire-Salamander (F/SB ELEMENTAR ELD-SALAMANDER)</h3>
+<pre>
+The fire salamander is a lizard made of fire.
+
+It can:
+1. Move 4 squares per action.
+2. Attack a target with fire making 1d6 damage per HD. See entry on FIRE.
+3. Ignite flammable objects.
+4. Illuminate 1 square per HD in each direction.
+5. Be harmed by physical weapons.
+6. Heal itself from a fire. Make an attack roll and heal as many HP.
+7. Destroy an air sylph if the fire salamander has an equal or higher SL. The air sylph gets a save at 10+HD to survive.
+8. Heat a metal weapon to increase damage by 1d6 for a number of combat turns equal to the fire salamander's HD. After the fight, roll save or weapon breaks.
+</pre>
+
+<h3>S/B Elemental Earth-Gnome (F/SB ELEMENTAR JORD-GNOM)</h3>
+<pre>
+The earth gnome is a humanoid entity made of clay.
+
+It can:
+1. Move 4 squares per action.
+2. Attack with AV 10+HD and damage 1d6 per HD.
+3. Be harmed by physical weapons, but attacker must roll save or weapon breaks.
+4. Give the direction to closet deposit of a type of metal specified by the spellcaster.
+5. Destroy an water undine if the earth gnome has an equal or higher SL. The water undine gets a save at 10+HD to survive.
+6. Destroy a fire elemental by lowering both elementals' HP until one is destroyed.
+</pre>
+
+<h3>S/B Elemental Water-Undine (F/SB ELEMENTAR VATTEN-UNDIN)</h3>
+<pre>
+The water undine is either a pillar of water or a female entity.
+
+It can:
+1. Move 1 square per action on land and 6 in water, and can carry 20 slots per SL in water.
+2. Drown a target for 1d6 damage per combat round.
+3. Take half damage rounded up from physical weapons.
+4. Destroy an earth gnome if the water undine has an equal or higher SL. The earth gnome gets a save at 10+HD to survive.
+5. Destroy a fire elemental by lowering both elementals' HP until one is destroyed.
+6. Make weapons work under water as if on land.
+</pre>
+
+<h3>Invisibility (OSYNLIGHET), range touch, duration 2 dungeon turns</h3>
+<pre>
+Turns one human-sized target invisible. An invisible person can only walk (i.e. use one normal or two careful movement actions) and talk and remain invisible. If they fight, run, use magic, or gets hurt, the spell is broken.
+</pre>
+
+<h3>Sight (SYN), range 80 squares, duration 10 combat turns</h3>
+<pre>
+The spellcaster can see and hear what happens in an area they are familiar with and is within the full range. If the spellcaster is not familiar with the area, the range is limited to 20 squares. Each extra SL allows the spellcaster to observe 24 hours back in time. If the spellcaster touches an item they get a vision of a previous owner or one use of the item. Each SL gives a 10% chance of finding the activation phrase of a magic item. The spellcaster can only try this once per item, until the spellcaster increase their level.
+</pre>
+
+<h3>Level 4</h3>
+<h3>Transform (FÖRÄNDRA), range 20 squares, duration 2 dungeon turns</h3>
+<pre>
+Transforms one human-sized item or creature into another of the same type (i.e. animal, plant, or mineral). Attributes remain the same, as does size, and the spell does not give access to any supernatural abilities of the new form. Unwilling targets get to save vs magic. Each extra SL can transform a single larger target or multiple regular-sized targets.
+</pre>
+
+<h3>Heal (HELA), range touch, duration instant</h3>
+<pre>
+Heals 1d6 HP per SL of damage from cuts, bruises, fire, cold, Energy Beam (ENERGISTRÅLE), Lightning (BLIXT), or acid. It does not heal damage from poison or disease.
+</pre>
+
+<h3>Control Person (KONTROLLERA PERSON), range 80 squares, duration 10 combat rounds</h3>
+<pre>
+Controls one intelligent creature (i.e. not animals) per SL. The target gets to save vs magic. If the first save is successful, target avoids the full effect, otherwise the target gets to save each combat turn to act independantly that turn. The spellcaster must concentrate on the targets, otherwise they fall down. Targets cannot not perform independant actions and cannot be made to commit suicide. If the spellcaster's concentration is broken, current targets fall into a deep sleep. Sleeping targets gets to CON save each combat round to wake up. 
+</pre>
+
+<h3>Teleportation (TELEPORTERA), range touch, duration instant</h3>
+<pre>
+Teleports a human-sized item or creature to a place the spellcaster knows well at most 100 m away. Each extra SL adds another 100 m. Unwilling targets gets to save vs magic.
+</pre>
+
+<pre>
+The following spells from Drakar och Demoner Expert (1985) are used when creating magic items. They are not available to PCs.
+</pre>
+
+<h3>Level 5</h3>
+<h3>Charge (LADDNING): ...</h3>
+<pre></pre>
+
+<h3>Level 6</h3>
+<h3>Permanence (PERMANENS): ...</h3>
+<pre></pre>
+
+<h3>Sigil (SIGILL): ...</h3>
+<pre></pre>
+
+<h3>Level 7</h3>
+<h3>Nexus (NEXUS): ...</h3>
+<pre></pre>
+
+<h2 id="SQUARE">SQUARE</h2>
+<pre>
+1.5 x 1.5 meter squares are used in dungeon maps. Movement and ranges are described in squares.
+</pre>
+
+<h2 id="XP">XP</h2>
+<pre>
+XP for treasure is collected when treasure is spent. Treasure is divided between the PCs by the players. If an NPC helps the PCs find the treasure, the referee negotiates for their share of treasure. Only valuables (e.g. coins, jewels) and art objects (e.g. jewelry, paintings) are treasure. Utility articles (e.g. weapons, tools) are not treasure and do not give XP.
+
+- Treasure spent to acquire equipment gives XP to current PC.
+- Treasure donated (e.g. by partying, giving to the poor, offering to religion) gives XP to current and next PC.
+- Treasure in the form of magic items donated to NPCs give XP to next PC as 1/10 of their resale value.
+
+1 silver piece = 1 XP.
+
+XP for defeated monsters (not necessarily killed) is divided between the PCs by the players. If an NPC helps the PCs in the fight, the referee negotiates for their share of XP.
+
+XP for written adventures are handed out when the PCs have explored a specificed part of the adventure. The referee decided on how many XP the complete adventure is worth based on length and difficulty, and divides them between different parts of the adventure. In a five level dungeon, the PCs may get 500 XP after each level explored. In a five checkpoint linear adventure, the PCs may get 500 XP at each checkpoint. Adventure XP is individual, and is not divided between multiple characters. The player must be present for their PC to get adventure XP.
+</pre>
+
+<pre>
+$ _
+</pre></body></html>
