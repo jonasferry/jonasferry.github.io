@@ -369,9 +369,9 @@ Equipment is carried in slots divided between body, backpack, and sack. One slot
 
 The body carries 5 slots. A one-handed weapon use 1 slot, a shield 1 slot, and a two-handed weapon 2 slots. Worn armor does not use any slots. Used body slots do not affect movement.
 
-A small backpack carries 5 slots while a large backpack carries 10 slots. Any slots used in a small backpack reduce movement by 1 square. Any slots used in a large backpack reduce movement by 2 squares.
+A small backpack carries 5 slots while a large backpack carries 10 slots. Any slots used in a small backpack increas encumbrance by 2. Any slots used in a large backpack increase encumbrance by 4.
 
-A sack carries 5 slots. Any slots used in a sack reduce movement by 1 square.
+A sack carries 5 slots. Any slots used in a sack increases encumbrance by 2.
 
 STR 13+ gives an extra slot of each type and STR 16+ gives two extra slots.
 <b>
@@ -647,14 +647,14 @@ Adding spell descriptions is work in progress.
 </pre>
 
 <h3>Level 1</h3>
-<h3>Mirror Image (AVBILD), range 20 squares, duration 2 dungeon turns</h3>
+<h3>Mirror Image (AVBILD), medium range, duration 2 dungeon turns</h3>
 <pre>
 Creates one human-sized illusion per SL. Extra SLs create multiple illusions or one larger illusion. The illusion is only visual, and has no sound, taste, or substance. The illusion can be made to move as long as the spellcaster concentrates.
 </pre>
 
-<h3>Fire (ELD), range 80 squares, duration instant</h3>
+<h3>Fire (ELD), long range, duration instant</h3>
 <pre>
-Heats a sphere the size of a square and makes 1d6 damage. Extra SL either gives an extra affected square or +1d6 damage in any combination. Stopped by Armor (SKYDD), but not by Anti Magic (ANTIMAGI). See entry on FIRE for damage and save.
+Heats a sphere with 1 meter diameter and makes 1d6 damage. Extra SL either gives an extra 1 meter sphere or +1d6 damage in any combination. Stopped by Armor (SKYDD), but not by Anti Magic (ANTIMAGI). See entry on FIRE for damage and save.
 </pre>
 
 <h3>Frost (FROST)</h3>
@@ -662,104 +662,104 @@ Heats a sphere the size of a square and makes 1d6 damage. Extra SL either gives 
 See Fire (ELD), but cold. There's no corresponding effect to catching on fire.
 </pre>
 
-<h3>Seal (FÖRSEGLA), range touch, duration 2 dungeon turns</h3>
+<h3>Seal (FÖRSEGLA), melee range, duration 2 dungeon turns</h3>
 <pre>
 Binds together two objects that don't move and fit together, for example a door to the frame or a sword to the scabbard. The objects are impossible to separate for the spell's duration, and any attempts to bash them open (i.e. chests or doors) take an extra dungeon turn. Each extra SL either adds two extra dungeon turns of duration or an extra dungeon turn of durability against bashing.
 </pre>
 
-<h3>Light (LJUS), range 80 squares, duration 1 dungeon turn</h3>
+<h3>Light (LJUS), long range, duration 1 dungeon turn</h3>
 <pre>
-Makes part of an object (approximately 4x4x4 cm) glow and illuminate 2 squares in each direction. Each extra SL either adds 2 extra squares in each direction or increases duration by 1 dungeon turn. To overcome the spell Darkness (MÖRKER) an equal SL or more of Light (LJUS) is needed.
+Makes part of an object (approximately 4x4x4 cm) glow and illuminate 3 meters, half near range, in each direction. Each extra SL either adds 3 extra meters in each direction or increases duration by 1 dungeon turn. To overcome the spell Darkness (MÖRKER) an equal SL or more of Light (LJUS) is needed.
 </pre>
 
-<h3>Resistance (MOTSTÅNDSKRAFT), range touch, duration 2 dungeon turns</h3>
+<h3>Resistance (MOTSTÅNDSKRAFT), melee range, duration 2 dungeon turns</h3>
 <pre>
 Protects from damage from the spells Fire (ELD) and Frost (FROST), as well as normal damage from heat or cold. Decreases 1 HP of damage per SL from those sources. If the user takes damage from multiple sources at the same time, the damage is decreased for each of them.
 </pre>
 
-<h3>Darkness (MÖRKER), range 80 squares, duration 1 dungeon turn</h3>
+<h3>Darkness (MÖRKER), long range, duration 1 dungeon turn</h3>
 <pre>
-Makes part of an object (approximately 4x4x4 cm) consume all light in 2 squares in each direction. Each extra SL either adds 2 extra squares in each direction or increases duration by 1 dungeon turn. To overcome the spell Light (LJUS) an equal SL or more of Darkness (MÖRKER) is needed.
+Makes part of an object (approximately 4x4x4 cm) consume all light in 3 meters in each direction. Each extra SL either adds 3 extra meters in each direction or increases duration by 1 dungeon turn. To overcome the spell Light (LJUS) an equal SL or more of Darkness (MÖRKER) is needed.
 </pre>
 
-<h3>Stone Wall (STENVÄGG), range 8 squares, duration 1 dungeon turn</h3>
+<h3>Stone Wall (STENVÄGG), near range, duration 1 dungeon turn</h3>
 <pre>
-Pulls up a wall from the dirt or a stone floor that is 1 square thick, 3 squares wide, and 3 squares high. Each extra SL adds the length of a square in one direction.
+Pulls up a wall from the dirt or a stone floor that is 1 meter thick, 3 meters wide, and 3 meters high. Each extra SL adds 1 meter in one direction.
 </pre>
 
 <h3>Level 2</h3>
-<h3>Anti Magic (ANTIMAGI), range 80 squares, duration 1 dungeon turn</h3>
+<h3>Anti Magic (ANTIMAGI), long range, duration 1 dungeon turn</h3>
 <pre>
-Placed on a creature or item and protects a volume of 3x3x3 squares. Gives +1 save vs magic per SL. A spell that is successfully saved is returned at the spellcaster. If cast in conjuction with Armor (SKYDD), the chance of success for Anti Magic (ANTIMAGI) is decreased by 1 per SL Armor (SKYDD).
+Placed on a creature or item and protects a volume of 5x5x5 meters, half near range. Gives +1 save vs magic per SL. A spell that is successfully saved is returned at the spellcaster. If cast in conjuction with Armor (SKYDD), the chance of success for Anti Magic (ANTIMAGI) is decreased by 1 per SL Armor (SKYDD).
 </pre>
 
-<h3>Lightning (BLIXT), range 40 squares, duration instant, quick</h3>
+<h3>Lightning (BLIXT), medium range, duration instant, quick</h3>
 <pre>
 Shoots a lightning bolt from the spellcaster to the closest target in front of the spellcaster. If two targets are equal, it's drawn to the target with most metal. Target gets save vs magic for half damage. This spell is quick, which means it takes effect the same combat round as it is prepared, not the next round.
 </pre>
 
-<h3>Energy Beam (ENERGISTRÅLE), range 80 squares, duration instant</h3>
+<h3>Energy Beam (ENERGISTRÅLE), long range, duration instant</h3>
 <pre>
 A beam of magic energy that does 1d6 damage per SL if it hits the target. Roll to-hit vs target AC, but not save vs magic.
 </pre>
 
-<h3>Curse Weapon (FÖRBANNA VAPEN), range 80 squares, duration 1 dungeon turn</h3>
+<h3>Curse Weapon (FÖRBANNA VAPEN), medium range, duration 1 dungeon turn</h3>
 <pre>
 Gives a weapon -1 AV and damage per SL. Each extra SL gives an extra -1, which may be divided between multiple weapons.
 </pre>
 
-<h3>Enchant Weapon (FÖRTROLLA VAPEN), range 80 squares, duration 1 dungeon turn</h3>
+<h3>Enchant Weapon (FÖRTROLLA VAPEN), long range, duration 1 dungeon turn</h3>
 <pre>
 Gives a weapon +1 AV and damage per SL. Each extra SL gives an extra +1, which may be divided between multiple weapons. Enchanted weapons damage monsters that only take damage from magic weapons.
 </pre>
 
-<h3>Lift (LYFT), range 80 squares, duration 2 dungeon turns</h3>
+<h3>Lift (LYFT), long range, duration 2 dungeon turns</h3>
 <pre>
-Lifts one human-sized object per SL, and can fly it through the air at a speed of 8 squares per movement action. Can be divided between multiple objects to make them all lighter or break a fall. When breaking a fall, each SL missing from lifting the full objects gives 1d6 damage.
+Lifts one human-sized object per SL, and can fly it through the air at normal movement speed. Can be divided between multiple objects to make them all lighter or break a fall. When breaking a fall, each SL missing from lifting the full objects gives 1d6 damage.
 </pre>
 
-<h3>Decrease (MINSKA), range touch, duration 1 dungeon turn</h3>
+<h3>Decrease (MINSKA), melee range, duration 1 dungeon turn</h3>
 <pre>
 Decrease the target's STR, DEX, or CON by 1 per SL. Attributes cannot be decreased below 1.
 </pre>
 
-<h3>Dispel (SKINGRA), range 80 squares, duration instant, quick</h3>
+<h3>Dispel (SKINGRA), long range, duration instant, quick</h3>
 <pre>
 Destroys another spell, or banishes an elemental, of equal or lower SL. Dispel (SKINGRA) must target a specific spell, but the spellcaster only needs an approximate idea of what the spell is. If the target is protected by Anti Magic (ANTIMAGI) it gets to save vs magic to avoid destruction. Items get to save with 10+1 per SL Anti Magic (ANTIMAGI). A spell that is being prepared can be dispelled, if the SL is equal or higher than the spell to destroy.
 </pre>
 
-<h3>Armor (SKYDD), range 80 squares, duration 1 dungeon turn</h3>
+<h3>Armor (SKYDD), long range, duration 1 dungeon turn</h3>
 <pre>
 Adds +1 AC per SL. If cast in conjuction with Anti Magic (ANTIMAGI), the chance of success for Armor (SKYDD) is decreased by 1 per SL Anti Magic (ANTIMAGI).
 </pre>
 
-<h3>Telepathy (TANKEÖVERFÖRING), range 80 squares, duration 10 combat rounds</h3>
+<h3>Telepathy (TANKEÖVERFÖRING), long range, duration 10 combat rounds</h3>
 <pre>
 Makes it possible to communicate without sounds with one target creature per SL. The target can be intelligent or not. Only surface thoughts and feelings can be communicated.
 </pre>
 
-<h3>Direction (VARSEBLIVNING), range 40 squares, duration 1 combat round</h3>
+<h3>Direction (VARSEBLIVNING), medium range, duration 1 combat round</h3>
 <pre>
 The spellcaster describes what they look for (e.g. a hidden door, gold, another mind), and the spell points in the direction of the closest thing of that kind. Each extra SL gives the direction to the closest thing of another kind.
 </pre>
 
-<h3>Increase (ÖKA), range touch, duration 1 dungeon turn</h3>
+<h3>Increase (ÖKA), melee range, duration 1 dungeon turn</h3>
 <pre>
 Increase the target's STR, DEX, or CON by 1 per SL.
 </pre>
 
-<h3>Open (ÖPPNA), range touch, duration instant</h3>
+<h3>Open (ÖPPNA), melee range, duration instant</h3>
 <pre>
 Opens locked doors and chests, and makes swords fall out of their scabbards. To overcome the spell Seal (FÖRSEGLA) an equal SL or more of Open (ÖPPNA) is needed.
 </pre>
 
 <h3>Level 3<h3>
-<h3>Protector (BESKYDDARE), range touch, duration permanent</h3>
+<h3>Protector (BESKYDDARE), melee range, duration permanent</h3>
 <pre>
-Nine stones are placed on the ground to protect a volume of 2x2x2 squares. Each extra SL adds the length of 2 squares in one direction. The spell works as a combination of Anti Magic (ANTIMAGI) SL 1 and Energy Beam (ENERGISTRÅLE) SL 1. Any spell saved by Anti Magic (ANTIMAGI) triggers an Energy Beam (ENERGISTRÅLE) that targets the spellcaster.
+Nine stones are placed on the ground to protect a volume of 3x3x3 meters. Each extra SL adds the length of 3 meters in one direction. The spell works as a combination of Anti Magic (ANTIMAGI) SL 1 and Energy Beam (ENERGISTRÅLE) SL 1. Any spell saved by Anti Magic (ANTIMAGI) triggers an Energy Beam (ENERGISTRÅLE) that targets the spellcaster.
 </pre>
 
-<h3>Summon/Banish Elemental (FRAMMANA/SKICKA BORT ELEMENTAR), range 8 squares, duration 10 combat rounds</h3>
+<h3>Summon/Banish Elemental (FRAMMANA/SKICKA BORT ELEMENTAR), near range, duration 10 combat rounds</h3>
 <pre>
 Summons a human-sized air, fire, earth, or water elemental of 1 HD per SL from an existing instance of that element within range. When summoned in combat, the elemental gets the same intiative as the spellcaster. The spellcaster concentrates to move the elemental, otherwise the elemental stands still.
 
@@ -775,7 +775,7 @@ The four elementals are different spells and must be learned separately.
 The air sylph is a vaguely human-looking entity made of whirling wind.
 
 It can:
-1. Move 12 squares per action unecumbered, 8 squares carrying a note on paper, and 1 square carrying items up to 20 slots.
+1. Use two move actions per round unecumbered, two move actions with CON roll carrying a note on paper, and one move action carrying items up to 20 slots.
 2. Blow someone to the ground, same as Trick (Push).
 3. Steer an arrow or thrown weapon for +1 AV and damage per HD.
 4. Not be harmed by physical weapons.
@@ -787,10 +787,10 @@ It can:
 The fire salamander is a lizard made of fire.
 
 It can:
-1. Move 4 squares per action.
+1. Use one move action per round.
 2. Attack a target with fire making 1d6 damage per HD. See entry on FIRE.
 3. Ignite flammable objects.
-4. Illuminate 1 square per HD in each direction.
+4. Illuminate 1 meter per HD in each direction.
 5. Be harmed by physical weapons.
 6. Heal itself from a fire. Make an attack roll and heal as many HP.
 7. Destroy an air sylph if the fire salamander has an equal or higher SL. The air sylph gets a save at 10+HD to survive.
@@ -802,7 +802,7 @@ It can:
 The earth gnome is a humanoid entity made of clay.
 
 It can:
-1. Move 4 squares per action.
+1. Use one move action per round.
 2. Attack with AV 10+HD and damage 1d6 per HD.
 3. Be harmed by physical weapons, but attacker must roll save or weapon breaks.
 4. Give the direction to closet deposit of a type of metal specified by the spellcaster.
@@ -815,7 +815,7 @@ It can:
 The water undine is either a pillar of water or a female entity.
 
 It can:
-1. Move 1 square per action on land and 6 in water, and can carry 20 slots per SL in water.
+1. Use one move action per round on land and two move actions per round in water, and can carry 20 slots per SL in water.
 2. Drown a target for 1d6 damage per combat round.
 3. Take half damage rounded up from physical weapons.
 4. Destroy an earth gnome if the water undine has an equal or higher SL. The earth gnome gets a save at 10+HD to survive.
@@ -823,35 +823,35 @@ It can:
 6. Make weapons work under water as if on land.
 </pre>
 
-<h3>Invisibility (OSYNLIGHET), range touch, duration 2 dungeon turns</h3>
+<h3>Invisibility (OSYNLIGHET), melee range, duration 2 dungeon turns</h3>
 <pre>
 Turns one human-sized target invisible. An invisible person can only walk (i.e. use one normal or two careful movement actions) and talk and remain invisible. If they fight, run, use magic, or gets hurt, the spell is broken.
 </pre>
 
-<h3>Sight (SYN), range 80 squares, duration 10 combat turns</h3>
+<h3>Sight (SYN), long range, duration 10 combat turns</h3>
 <pre>
-The spellcaster can see and hear what happens in an area they are familiar with and is within the full range. If the spellcaster is not familiar with the area, the range is limited to 20 squares. Each extra SL allows the spellcaster to observe 24 hours back in time. If the spellcaster touches an item they get a vision of a previous owner or one use of the item. Each SL gives a 10% chance of finding the activation phrase of a magic item. The spellcaster can only try this once per item, until the spellcaster increase their level.
+The spellcaster can see and hear what happens in an area they are familiar with and is within the full range. If the spellcaster is not familiar with the area, the range is limited to 30 meters, one range increment. Each extra SL allows the spellcaster to observe 24 hours back in time. If the spellcaster touches an item they get a vision of a previous owner or one use of the item. Each SL gives a 10% chance of finding the activation phrase of a magic item. The spellcaster can only try this once per item, until the spellcaster increase their level.
 </pre>
 
 <h3>Level 4</h3>
-<h3>Transform (FÖRÄNDRA), range 20 squares, duration 2 dungeon turns</h3>
+<h3>Transform (FÖRÄNDRA), near range, duration 2 dungeon turns</h3>
 <pre>
 Transforms one human-sized item or creature into another of the same type (i.e. animal, plant, or mineral). Attributes remain the same, as does size, and the spell does not give access to any supernatural abilities of the new form. Unwilling targets get to save vs magic. Each extra SL can transform a single larger target or multiple regular-sized targets.
 </pre>
 
-<h3>Heal (HELA), range touch, duration instant</h3>
+<h3>Heal (HELA), melee range, duration instant</h3>
 <pre>
 Heals 1d6 HP per SL of damage from cuts, bruises, fire, cold, Energy Beam (ENERGISTRÅLE), Lightning (BLIXT), or acid. It does not heal damage from poison or disease.
 </pre>
 
-<h3>Control Person (KONTROLLERA PERSON), range 80 squares, duration 10 combat rounds</h3>
+<h3>Control Person (KONTROLLERA PERSON), long range, duration 10 combat rounds</h3>
 <pre>
 Controls one intelligent creature (i.e. not animals) per SL. The target gets to save vs magic. If the first save is successful, target avoids the full effect, otherwise the target gets to save each combat turn to act independantly that turn. The spellcaster must concentrate on the targets, otherwise they fall down. Targets cannot not perform independant actions and cannot be made to commit suicide. If the spellcaster's concentration is broken, current targets fall into a deep sleep. Sleeping targets gets to CON save each combat round to wake up. 
 </pre>
 
-<h3>Teleportation (TELEPORTERA), range touch, duration instant</h3>
+<h3>Teleportation (TELEPORTERA), melee range, duration instant</h3>
 <pre>
-Teleports a human-sized item or creature to a place the spellcaster knows well at most 100 m away. Each extra SL adds another 100 m. Unwilling targets gets to save vs magic.
+Teleports a human-sized item or creature to a place the spellcaster knows well at most 100 meters away. Each extra SL adds another 100 m. Unwilling targets gets to save vs magic.
 </pre>
 
 <pre>
@@ -880,12 +880,12 @@ When surprised in the first round of combat, roll 1d6: 1=one round of no action,
 
 <h2 id="TORCH">TORCH</h2>
 <pre>
-A torch burns for 6 dungeon turns. Lanterns burn for 24 dungeon turns. Both illuminate 6 squares in all directions unless the lantern is shielded.
+A torch burns for 6 dungeon turns. Lanterns burn for 24 dungeon turns. Both illuminate 10 meters, near range, in all directionsunless the lantern is shielded.
 </pre>
 
 <h2 id="TRAP">TRAP</h2>
 <pre>
-To find a hidden trap, roll trained WIS AC 4. The speed is 10 squares per dungeon turn. Searching a door or item for traps take one dungeon turn. The referee must decide on the activation mechanism before the roll is made and the player must describe where the PC searches. Most traps admit a save to either avoid activating the trap or avoid the effect of the trap.
+To find a hidden trap, roll trained WIS AC 4. The speed is 5x5 meters, near range, per dungeon turn. Searching a door or item for traps take one dungeon turn. The referee must decide on the activation mechanism before the roll is made and the player must describe where the PC searches. Most traps admit a save to either avoid activating the trap or avoid the effect of the trap.
 </pre>
 
 <h2 id="USEMAGICITEM">USE MAGIC ITEM</h2>
