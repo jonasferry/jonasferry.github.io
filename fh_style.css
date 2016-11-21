@@ -26,15 +26,21 @@ pre {
 }
 h1 {
   font-family: monospace;
+  font-size: 19px;
+  margin: 0;
+  padding-bottom: 14px;
+}
+h2 {
+  font-family: monospace;
   font-size: 17px;
   margin: 0;
 }
-h2 {
+h3 {
   font-family: monospace;
   font-size: 15px;
   margin: 0;
 }
-h3 {
+h4 {
   font-family: monospace;
   font-size: 14px;
   margin: 0;
